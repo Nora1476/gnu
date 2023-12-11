@@ -36,21 +36,7 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
     include G5_BBS_PATH . '/newwin.inc.php'; // 팝업레이어
   }
   ?>
-  <div id="tnb">
-    <div class="inner">
-      <ul id="hd_qnb">
-        <?php if ($is_member) { ?>
-          <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-          <?php if ($is_admin) { ?>
-            <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-          <?php } ?>
-        <?php } else { ?>
-          <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-          <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
-        <?php } ?>
-      </ul>
-    </div>
-  </div>
+
 
   <header>
     <div class="inner">
@@ -66,6 +52,15 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
               <li class="links">CERTIFICATION</li>
               <li class="links">COMMENT</li>
               <li class="links">HERE</li>
+              <?php if ($is_member) { ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+                <?php if ($is_admin) { ?>
+                  <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                <?php } ?>
+              <?php } else { ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+              <?php } ?>
             </ul>
           </div>
 
@@ -79,6 +74,15 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
               <li class="links">CERTIFICATION</li>
               <li class="links">COMMENT</li>
               <li class="links">HERE</li>
+              <?php if ($is_member) { ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+                <?php if ($is_admin) { ?>
+                  <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                <?php } ?>
+              <?php } else { ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+              <?php } ?>
             </ul>
           </div>
         </div>
