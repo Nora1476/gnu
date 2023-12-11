@@ -29,7 +29,7 @@ $(function () {
     adaptiveHeight: true,
     // variableWidth: true,
     centerMode: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     centerPadding: "0px",
     prevArrow: "<button type='button' class='slick_next'></button>", // 이전 화살표 모양 설정"<button type='button' class='slick-prev'>Previous</button>"

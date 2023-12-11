@@ -29,23 +29,23 @@ include_once(G5_PATH . '/head.php');
 				<div class="slider_gallery">
 					<div>
 						<img src="./img/image/main1.jpg" alt="slide1" />
-						<h2>main <span>content</span></h2>
-						<button>더보기</button>
+						<!-- <h2>main <span>content</span></h2>
+						<button>더보기</button> -->
 					</div>
 					<div>
 						<img src="./img/image/main2.jpg" alt="slide2" />
-						<h2>main <span>content</span></h2>
-						<button>더보기</button>
+						<!-- <h2>main <span>content</span></h2>
+						<button>더보기</button> -->
 					</div>
 					<div>
 						<img src="./img/image/main3.jpg" alt="slide3" />
-						<h2>main <span>content</span></h2>
-						<button>더보기</button>
+						<!-- <h2>main <span>content</span></h2>
+						<button>더보기</button> -->
 					</div>
 					<div>
 						<img src="./img/image/main1.jpg" alt="slide4" />
-						<h2>main <span>content</span></h2>
-						<button>더보기</button>
+						<!-- <h2>main <span>content</span></h2>
+						<button>더보기</button> -->
 					</div>
 				</div>
 			</div>

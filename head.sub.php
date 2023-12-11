@@ -108,6 +108,8 @@ header("Pragma: no-cache"); // HTTP/1.0
 
     //커스텀
     add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">', 0);
+    add_stylesheet('<link rel="stylesheet" href="' . G5_JS_URL . '/slick/slick.css">', 0);
+    add_stylesheet('<link rel="stylesheet" href="' . G5_JS_URL . '/slick/slick-theme.css">', 0);
     add_stylesheet('<link rel="stylesheet" href="' . G5_CSS_URL . '/aos.css">', 0);
     add_stylesheet('<link rel="stylesheet" href="' . G5_CSS_URL . '/c_common.css">', 0);
     add_stylesheet('<link rel="stylesheet" href="' . G5_CSS_URL . '/c_main.css">', 0);
