@@ -43,23 +43,23 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
       <div class="gnb_wrap">
         <div class="gnb_inner">
           <a href="/" class="gnb logo">
-            <img src="./img/image/logo.png" alt="" />
+            <img src="<?php echo G5_IMG_URL ?>/image/logo.png" alt="" />
           </a>
 
           <div class="gnb pc_ver">
             <ul class="main_menu">
               <li class="links">ABOUT</li>
-              <li class="links">CERTIFICATION</li>
-              <li class="links">COMMENT</li>
+              <li class="links"><a href="/bbs/board.php?bo_table=certification">CERTIFICATION</a></li>
+              <li class="links"><a href="/bbs/board.php?bo_table=free">COMMENT</a></li>
               <li class="links">HERE</li>
               <?php if ($is_member) { ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-                <?php if ($is_admin) { ?>
-                  <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-                <?php } ?>
+              <li class="links"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+              <?php if ($is_admin) { ?>
+              <li class="tnb_admin links"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+              <?php } ?>
               <?php } else { ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-                <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+              <li class="links"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+              <li class="links"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
               <?php } ?>
             </ul>
           </div>
@@ -71,17 +71,17 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
                 <div><span class="material-symbols-outlined btn_close"> close </span></div>
               </li>
               <li class="links">ABOUT</li>
-              <li class="links">CERTIFICATION</li>
-              <li class="links">COMMENT</li>
+              <li class="links"><a href="bbs/board.php?bo_table=certification">CERTIFICATION</a></li>
+              <li class="links"><a href="/bbs/board.php?bo_table=free">COMMENT</a></li>
               <li class="links">HERE</li>
               <?php if ($is_member) { ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-                <?php if ($is_admin) { ?>
-                  <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-                <?php } ?>
+              <li class="links"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+              <?php if ($is_admin) { ?>
+              <li class="tnb_admin links"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+              <?php } ?>
               <?php } else { ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-                <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+              <li class="links"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+              <li class="links"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
               <?php } ?>
             </ul>
           </div>

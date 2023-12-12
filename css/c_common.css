@@ -3,6 +3,10 @@
 @import "c_reset.css";
 @import "c_font.css";
 
+#bo_list {
+  padding: 20px;
+}
+
 body {
   font-family: "Pretendard";
 }

@@ -1,49 +1,78 @@
 @charset "utf-8";
 
 /* 새글 스킨 (latest) */
-.lat {
+.pic_li_lt {
   position: relative;
-  margin-bottom: 20px;
+  width: 33.3333%;
+  float: left;
+  padding: 0 10px;
   background: #fff;
 }
-.lat .lat_title {
+.pic_li_lt .lat_title {
   display: block;
   line-height: 45px;
   font-size: 1.2em;
   color: #253dbe;
 }
-.lat .lat_title a {
-  position: relative;
+.pic_li_lt .lat_title a {
   color: #000;
   display: inline-block;
+  position: relative;
+}
+.latest_top_wr .pic_li_lt:nth-child(3n + 1) {
+  clear: both !important;
 }
 
-.lat ul {
-  padding: 10px 0;
+.pic_li_lt .lt_more {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  display: block;
+  width: 25px;
+  line-height: 25px;
+  color: #aaa;
+  border-radius: 3px;
+  text-align: center;
 }
-.lat li {
-  position: relative;
-  line-height: 18px;
+.pic_li_lt .lt_more:hover {
+  color: #777;
+}
+.pic_li_lt ul:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  content: "";
+}
+.pic_li_lt li {
   border-bottom: 1px solid #e5ecee;
   margin-bottom: 10px;
 }
-.lat li a {
+.pic_li_lt li .lt_img {
+  display: none;
+}
+.pic_li_lt li:first-child .lt_img {
+  display: block;
+  margin: 0 0 10px;
+}
+.pic_li_lt li:first-child .lt_img img,
+.pic_li_lt li .lt_img video {
+  width: 100%;
+  height: auto;
+}
+.pic_li_lt li .pic_li_tit {
   font-weight: bold;
   font-size: 1.2em;
   line-height: 20px;
   vertical-align: middle;
 }
-.lat li a:hover {
-  color: #3a8afd;
-}
-.lat li .fa-heart {
+
+.pic_li_lt li .fa-heart {
   color: #ff0000;
 }
-.lat li .fa-lock {
+.pic_li_lt li .fa-lock {
   display: inline-block;
   line-height: 14px;
   width: 16px;
-  font-size: 0.833em;
   color: #4f818c;
   background: #cbe3e8;
   text-align: center;
@@ -52,7 +81,7 @@
   border: 1px solid #cbe3e8;
   vertical-align: middle;
 }
-.lat li .new_icon {
+.pic_li_lt li .new_icon {
   display: inline-block;
   width: 16px;
   line-height: 16px;
@@ -65,7 +94,7 @@
   font-weight: bold;
   vertical-align: middle;
 }
-.lat li .hot_icon {
+.pic_li_lt li .hot_icon {
   display: inline-block;
   width: 16px;
   line-height: 16px;
@@ -76,10 +105,10 @@
   border-radius: 2px;
   vertical-align: middle;
 }
-.lat li .fa-caret-right {
+.pic_li_lt li .fa-caret-right {
   color: #bbb;
 }
-.lat li .fa-download {
+.pic_li_lt li .fa-download {
   display: inline-block;
   width: 16px;
   line-height: 16px;
@@ -90,7 +119,7 @@
   border-radius: 2px;
   vertical-align: middle;
 }
-.lat li .fa-link {
+.pic_li_lt li .fa-link {
   display: inline-block;
   width: 16px;
   line-height: 16px;
@@ -102,7 +131,7 @@
   vertical-align: middle;
 }
 
-.lat .profile_img img {
+.pic_li_lt .profile_img img {
   border-radius: 50%;
 }
 
@@ -115,18 +144,18 @@
   color: #888;
 }
 
-.lat .empty_li {
+.pic_li_lt .empty_li {
   line-height: 145px;
   color: #666;
   text-align: center;
   padding: 0;
 }
-.lat .empty_li:before {
+.pic_li_lt .empty_li:before {
   background: none;
   padding: 0;
 }
 
-.lat .lt_cmt {
+.pic_li_lt .lt_cmt {
   background: #e9eff5;
   color: #3a8afd;
   font-size: 11px;
@@ -136,10 +165,10 @@
   border-radius: 3px;
   vertical-align: middle;
 }
-.lat .lt_more {
+.pic_li_lt .lt_more {
   position: absolute;
   top: 11px;
-  right: 0;
+  right: 10px;
   display: block;
   width: 40px;
   line-height: 25px;
@@ -147,6 +176,6 @@
   border-radius: 3px;
   text-align: center;
 }
-.lat .lt_more:hover {
+.pic_li_lt .lt_more:hover {
   color: #777;
 }
