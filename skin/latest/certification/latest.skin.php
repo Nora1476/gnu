@@ -1,9 +1,9 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-include_once(G5_LIB_PATH.'/thumbnail.lib.php');
+include_once(G5_LIB_PATH . '/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="' . $latest_skin_url . '/style.css">', 0);
 $thumb_width = 297;
 $thumb_height = 212;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
@@ -17,6 +17,29 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <ul class="gallery" id="gallery" data-aos="fade-right">
       <li class="gallery_sizer"></li>
       <!-- <li class="gallery_item"></li> -->
+      <?php
+      for ($i = 0; $i < $list_count; $i++) {
+
+        $img_link_html = '';
+
+        $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
+
+        if ($i === 0) {
+          $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
+
+          if (isset($thumb['src']) && $thumb['src']) {
+            $img = $thumb['src'];
+          } else {
+            $img = G5_IMG_URL . '/no_img.png';
+            $thumb['alt'] = '이미지가 없습니다.';
+          }
+          $img_content = '<img src="' . $img . '" alt="' . $thumb['alt'] . '" >';
+          $img_link_html = '<a href="' . $wr_href . '" class="lt_img" >' . run_replace('thumb_image_tag', $img_content, $thumb) . '</a>';
+        } ?>
+
+      <!-- list 삽입 -->
+
+      <?php } ?>
     </ul>
 
     <div class="btn_wrap">
@@ -98,5 +121,14 @@ $(function() {
     $("#lightbox").addClass("hide");
     $("body").css("overflow", "auto");
   });
+
+
+
 })
+
+// //갤러리로 이동
+function goGallery() {
+  var targetURL = "<?php echo G5_BBS_URL ?>/board.php?bo_table=certification";
+  window.location.href = targetURL;
+}
 </script>

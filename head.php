@@ -49,7 +49,7 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
           <div class="gnb pc_ver">
             <ul class="main_menu">
               <li class="links">ABOUT</li>
-              <li class="links"><a href="/bbs/board.php?bo_table=certification">CERTIFICATION</a></li>
+              <li class="links">CERTIFICATION</li>
               <li class="links"><a href="/bbs/board.php?bo_table=free">COMMENT</a></li>
               <li class="links">HERE</li>
               <?php if ($is_member) { ?>
@@ -71,7 +71,7 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
                 <div><span class="material-symbols-outlined btn_close"> close </span></div>
               </li>
               <li class="links">ABOUT</li>
-              <li class="links"><a href="bbs/board.php?bo_table=certification">CERTIFICATION</a></li>
+              <li class="links">CERTIFICATION</li>
               <li class="links"><a href="/bbs/board.php?bo_table=free">COMMENT</a></li>
               <li class="links">HERE</li>
               <?php if ($is_member) { ?>
