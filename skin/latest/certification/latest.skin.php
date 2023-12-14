@@ -7,6 +7,7 @@ add_stylesheet('<link rel="stylesheet" href="' . $latest_skin_url . '/style.css"
 $thumb_width = 297;
 $thumb_height = 212;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
+
 ?>
 
 <div class="sec sec3" id="certi">
@@ -17,29 +18,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <ul class="gallery" id="gallery" data-aos="fade-right">
       <li class="gallery_sizer"></li>
       <!-- <li class="gallery_item"></li> -->
-      <?php
-      for ($i = 0; $i < $list_count; $i++) {
 
-        $img_link_html = '';
-
-        $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
-
-        if ($i === 0) {
-          $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
-
-          if (isset($thumb['src']) && $thumb['src']) {
-            $img = $thumb['src'];
-          } else {
-            $img = G5_IMG_URL . '/no_img.png';
-            $thumb['alt'] = '이미지가 없습니다.';
-          }
-          $img_content = '<img src="' . $img . '" alt="' . $thumb['alt'] . '" >';
-          $img_link_html = '<a href="' . $wr_href . '" class="lt_img" >' . run_replace('thumb_image_tag', $img_content, $thumb) . '</a>';
-        } ?>
-
-      <!-- list 삽입 -->
-
-      <?php } ?>
     </ul>
 
     <div class="btn_wrap">
@@ -70,18 +49,21 @@ $(function() {
     gutter: 10,
   });
 
-  // $(document).ready(function () {
-  //   $.ajax({
-  //     url: "../crud/gallery_main.php",
-  //     type: "get",
-  //     success: function (data) {
-  //       $allData = JSON.parse(data); //전체 데이터를 가져옴
+  $(document).ready(function() {
+    $.ajax({
+      url: g5_bbs_url + "/ajax.gallery.main.php",
+      type: "get",
+      success: function(data) {
+        $allData = JSON.parse(data);
+        console.log($allData);
 
-  //       addItem(); // 열자마자 아이템 추가
-  //       $loadMoreBtn.click(addItem); //버튼 클릭시 아이템 추가
-  //     },
-  //   });
-  // });
+        addItem(); // 열자마자 아이템 추가
+        // $loadMoreBtn.click(addItem); //버튼 클릭시 아이템 추가
+      },
+    });
+  });
+
+
 
   function addItem() {
     var elements = [];
@@ -89,8 +71,15 @@ $(function() {
     //A.slice(0,8)  A배열 0번째부터 번쨰 전까지의 값을 가져옴
     slidedData = $allData.slice($added, $added + $addItemCount);
     $.each(slidedData, function(i, item) {
-      var itemHTML = '<li class="gallery_item is_loading">' + "<figure>" + '<img src="' + item.file +
-        '" alt="' + item.title + '">' + "</figure>" + "</li>";
+
+
+      var itemHTML =
+        '<li class="gallery_item is_loading">' +
+        "<figure>" +
+        '<img src="' + item.wr_file + '" alt="' + item.wr_subject + '">' +
+        "</figure>" +
+        "</li>";
+
       elements.push($(itemHTML).get(0));
     }); //each
     $container.append(elements);
