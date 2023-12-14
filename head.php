@@ -50,16 +50,16 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
             <ul class="main_menu">
               <li class="links">ABOUT</li>
               <li class="links">CERTIFICATION</li>
-              <li class="links"><a href="/bbs/board.php?bo_table=free">COMMENT</a></li>
+              <li class="links">COMMENT</li>
               <li class="links">HERE</li>
               <?php if ($is_member) { ?>
-              <li class="links"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-              <?php if ($is_admin) { ?>
-              <li class="tnb_admin links"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-              <?php } ?>
+                <li class="links"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+                <?php if ($is_admin) { ?>
+                  <li class="tnb_admin links"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                <?php } ?>
               <?php } else { ?>
-              <li class="links"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-              <li class="links"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+                <li class="links"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+                <li class="links"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
               <?php } ?>
             </ul>
           </div>
@@ -72,16 +72,16 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
               </li>
               <li class="links">ABOUT</li>
               <li class="links">CERTIFICATION</li>
-              <li class="links"><a href="/bbs/board.php?bo_table=free">COMMENT</a></li>
+              <li class="links">COMMENT</li>
               <li class="links">HERE</li>
               <?php if ($is_member) { ?>
-              <li class="links"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-              <?php if ($is_admin) { ?>
-              <li class="tnb_admin links"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-              <?php } ?>
+                <li class="links"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+                <?php if ($is_admin) { ?>
+                  <li class="tnb_admin links"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                <?php } ?>
               <?php } else { ?>
-              <li class="links"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-              <li class="links"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+                <li class="links"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+                <li class="links"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
               <?php } ?>
             </ul>
           </div>

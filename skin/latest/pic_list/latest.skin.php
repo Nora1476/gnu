@@ -16,45 +16,22 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <div class="tit_wrap">
       <h2>COMMENT</h2>
     </div>
-    <form id="commentFrm" method="post" data-aos="fade-up">
-      <div class="row">
-        <span class="con point">이름</span>
-        <div class="con_con">
-          <input class="con_focus" type="text" id="name" name="name" />
-        </div>
-      </div>
-      <div class="row">
-        <span class="con point">연락처</span>
-        <div class="con_con">
-          <input type="text" id="phone" name="phone" />
-        </div>
-      </div>
-      <div class="row">
-        <span class="con point">이메일</span>
-        <div class="con_con">
-          <input type="text" id="email" name="email" />
-        </div>
-      </div>
-      <div class="row">
-        <span class="con point">관계</span>
-        <div class="con_con">
-          <label class="radio_inline"> <input type="radio" name="type" id="type" value="친구" /> 친구 </label>
-          <label class="radio_inline"> <input type="radio" name="type" id="type" value="동료" /> 회사동료 </label>
-          <label class="radio_inline"> <input type="radio" name="type" id="type" value="친척" /> 가족/친척 </label>
-          <label class="radio_inline"> <input type="radio" name="type" id="type" value="기타" /> 기타 </label>
-        </div>
-      </div>
-      <div class="row contact">
-        <span class="con point">내용</span>
-        <div class="con_con">
-          <textarea name="content" id="content" rows="6"></textarea>
-        </div>
-      </div>
 
-      <div class="row">
-        <input type="submit" class="btn btn_submit" value="Submit " />
-        <!-- <input type="button" class="btn btn_cancel" value="Cancel " /> -->
-      </div>
-    </form>
+    <div>main에 보여질 부분</div>
+
+    <div class="btn_wrap">
+      <button class="move_page" id="move_page" onclick="goComment()">Go Comment</button>
+    </div>
   </div>
 </div>
+
+
+
+<script>
+
+  // //갤러리로 이동
+  function goComment() {
+    var targetURL = "<?php echo G5_BBS_URL ?>/board.php?bo_table=free";
+    window.location.href = targetURL;
+  }
+</script>
