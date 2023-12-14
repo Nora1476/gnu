@@ -76,7 +76,7 @@ $(function() {
       var itemHTML =
         '<li class="gallery_item is_loading">' +
         "<figure>" +
-        '<img src="' + item.wr_file + '" alt="' + item.wr_subject + '">' +
+        '<img src="/data/file/' + item.bo_table + '/' + item.bf_file + '" alt="' + item.bf_source + '">' +
         "</figure>" +
         "</li>";
 

@@ -3,8 +3,9 @@
   include_once './_common.php';
   include_once(G5_LIB_PATH . '/thumbnail.lib.php');
 
+  $bo_table = "certification";
 
-  $result = sql_query("SELECT * FROM g5_write_certification");
+  $result = sql_query(" select * from {$g5['board_file_table']} where bo_table = '{$bo_table}' ");
   $output = array(); // 응답값으로 보낼 값
 
   while ($row = sql_fetch_array($result)) {
