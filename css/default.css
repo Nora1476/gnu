@@ -737,7 +737,7 @@ a.gnb_2da:hover {
 }
 #ft_copy {
   text-align: center;
-  width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
   color: #5b5b5b;
@@ -1888,4 +1888,46 @@ textarea.required {
   font-size: 2em;
   text-decoration: none;
   text-align: center;
+}
+
+@media all and (max-width: 768px) {
+  /* 레이아웃 크기 지정 */
+  #hd,
+  #wrapper,
+  #ft {
+    min-width: 540px;
+  }
+
+  #hd_pop,
+  #hd_wrapper,
+  #tnb .inner,
+  #gnb .gnb_wrap,
+  #container_wr,
+  #ft_wr {
+    min-width: 540px;
+  }
+  #ft_copy {
+    min-width: 540px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  /* 레이아웃 크기 지정 */
+  #hd,
+  #wrapper,
+  #ft {
+    min-width: 360px;
+  }
+
+  #hd_pop,
+  #hd_wrapper,
+  #tnb .inner,
+  #gnb .gnb_wrap,
+  #container_wr,
+  #ft_wr {
+    min-width: 360px;
+  }
+  #ft_copy {
+    min-width: 360px;
+  }
 }

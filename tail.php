@@ -41,7 +41,8 @@ if (G5_IS_MOBILE) {
         // echo latest('notice', 'notice', 4, 13);
         ?>
 
-        <?php //echo visit(); // 접속자집계, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
+        <?php //echo visit(); // 접속자집계, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 
+        ?>
     </div>
     <!-- <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div> -->
     <div id="ft_copy">Copyright &copy; All rights reserved.</div>
@@ -50,9 +51,11 @@ if (G5_IS_MOBILE) {
         <i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
     </button>
     <script>
-        $(function () {
-            $("#top_btn").on("click", function () {
-                $("html, body").animate({ scrollTop: 0 }, '500');
+        $(function() {
+            $("#top_btn").on("click", function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, '500');
                 return false;
             });
         });
@@ -72,7 +75,7 @@ if ($config['cf_analytics']) {
 <!-- } 하단 끝 -->
 
 <script>
-    $(function () {
+    $(function() {
         // 폰트 리사이즈 쿠키있으면 실행
         font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
     });

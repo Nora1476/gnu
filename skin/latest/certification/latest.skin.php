@@ -55,10 +55,9 @@ $(function() {
       type: "get",
       success: function(data) {
         $allData = JSON.parse(data);
-        console.log($allData);
 
         addItem(); // 열자마자 아이템 추가
-        // $loadMoreBtn.click(addItem); //버튼 클릭시 아이템 추가
+        $loadMoreBtn.click(addItem); //버튼 클릭시 아이템 추가
       },
     });
   });
@@ -71,7 +70,6 @@ $(function() {
     //A.slice(0,8)  A배열 0번째부터 번쨰 전까지의 값을 가져옴
     slidedData = $allData.slice($added, $added + $addItemCount);
     $.each(slidedData, function(i, item) {
-
 
       var itemHTML =
         '<li class="gallery_item is_loading">' +
